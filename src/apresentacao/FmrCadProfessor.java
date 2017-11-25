@@ -8,7 +8,7 @@ package apresentacao;
 /**
  *
  * @author postgres
- */ teste
+ */ 
 public class FmrCadProfessor extends javax.swing.JInternalFrame {
 
     /**

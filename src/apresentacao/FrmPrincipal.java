@@ -7,6 +7,8 @@ package apresentacao;
 
 import static com.sun.glass.events.WindowEvent.MAXIMIZE;
 import static java.awt.GridBagConstraints.BOTH;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 
 
@@ -163,7 +165,12 @@ public class FrmPrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_jMenuItem8ActionPerformed
 
     private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
-             FrmCadDisciplinas form = new FrmCadDisciplinas();
+             FrmCadDisciplinas form = null;
+        try {
+            form = new FrmCadDisciplinas();
+        } catch (ClassNotFoundException ex) {
+            Logger.getLogger(FrmPrincipal.class.getName()).log(Level.SEVERE, null, ex);
+        }
              form.setVisible (true);
              jDesktopPane1.add(form);
               try {   
