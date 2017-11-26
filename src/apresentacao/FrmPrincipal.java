@@ -6,6 +6,7 @@
 package apresentacao;
 
 import static com.sun.glass.events.WindowEvent.MAXIMIZE;
+import java.awt.Component;
 import static java.awt.GridBagConstraints.BOTH;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -65,7 +66,7 @@ public class FrmPrincipal extends javax.swing.JFrame {
             .addGap(0, 380, Short.MAX_VALUE)
         );
 
-        jMenu4.setIcon(new javax.swing.ImageIcon("C:\\Users\\postgres\\Desktop\\icones\\home-home-page-onebit-icone-5226-16.png")); // NOI18N
+        jMenu4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icones/home-home-page-onebit-icone-5226-16.png"))); // NOI18N
         jMenu4.setText("Inicio");
         jMenu4.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
 
@@ -82,7 +83,7 @@ public class FrmPrincipal extends javax.swing.JFrame {
 
         jMenuBar1.add(jMenu4);
 
-        jMenu1.setIcon(new javax.swing.ImageIcon("C:\\Users\\postgres\\Desktop\\icones\\book-icone-6994-16.png")); // NOI18N
+        jMenu1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icones/book-icone-6994-16.png"))); // NOI18N
         jMenu1.setText("Disciplinas");
         jMenu1.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
 
@@ -106,12 +107,17 @@ public class FrmPrincipal extends javax.swing.JFrame {
 
         jMenuBar1.add(jMenu1);
 
-        jMenu2.setIcon(new javax.swing.ImageIcon("C:\\Users\\postgres\\Desktop\\icones\\user-icone-4297-16.png")); // NOI18N
+        jMenu2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icones/user-icone-4297-16.png"))); // NOI18N
         jMenu2.setText("Professores");
         jMenu2.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
 
         jMenuItem3.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_F2, java.awt.event.InputEvent.CTRL_MASK));
         jMenuItem3.setText("Cadastrar");
+        jMenuItem3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem3ActionPerformed(evt);
+            }
+        });
         jMenu2.add(jMenuItem3);
 
         jMenuItem4.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_F2, java.awt.event.InputEvent.ALT_MASK));
@@ -120,7 +126,7 @@ public class FrmPrincipal extends javax.swing.JFrame {
 
         jMenuBar1.add(jMenu2);
 
-        jMenu3.setIcon(new javax.swing.ImageIcon("C:\\Users\\postgres\\Desktop\\icones\\page-white-text-icone-7821-16.png")); // NOI18N
+        jMenu3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icones/page-white-text-icone-7821-16.png"))); // NOI18N
         jMenu3.setText("Cursos");
         jMenu3.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
 
@@ -132,7 +138,7 @@ public class FrmPrincipal extends javax.swing.JFrame {
 
         jMenuBar1.add(jMenu3);
 
-        jMenu5.setIcon(new javax.swing.ImageIcon("C:\\Users\\postgres\\Desktop\\icones\\page-white-text-icone-7821-16.png")); // NOI18N
+        jMenu5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icones/page-white-text-icone-7821-16.png"))); // NOI18N
         jMenu5.setText("Plano de Ensino");
         jMenu5.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
 
@@ -164,10 +170,11 @@ public class FrmPrincipal extends javax.swing.JFrame {
       System.exit(0);  // TODO add your handling code here:
     }//GEN-LAST:event_jMenuItem8ActionPerformed
 
+    @SuppressWarnings("null")
     private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
-             FrmCadDisciplinas form = null;
+       FrmCadDisciplina form = null;
         try {
-            form = new FrmCadDisciplinas();
+            form = new FrmCadDisciplina();
         } catch (ClassNotFoundException ex) {
             Logger.getLogger(FrmPrincipal.class.getName()).log(Level.SEVERE, null, ex);
         }
@@ -180,13 +187,71 @@ public class FrmPrincipal extends javax.swing.JFrame {
             //set o tamanho máximo dela, que depende da janela pai   
             form.setMaximum(true);   
         } 
+              catch (java.beans.PropertyVetoException e) {}         // TODO add your handling code here:
+
+
+
+         try {   
+            form.setSelected(true);   
+            //diz que a janela interna é maximizável   
+            form.setMaximizable(true);   
+            //set o tamanho máximo dela, que depende da janela pai   
+            form.setMaximum(true);   
+        } 
               catch (java.beans.PropertyVetoException e) {}   
-    
     }//GEN-LAST:event_jMenuItem1ActionPerformed
 
     private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
-          
+    FmrConsDisplina form = new FmrConsDisplina();
+             form.setVisible (true);
+        Component add;
+        add = jDesktopPane1.add(form);
+              try {   
+            form.setSelected(true);   
+            //diz que a janela interna é maximizável   
+            form.setMaximizable(true);   
+            //set o tamanho máximo dela, que depende da janela pai   
+            form.setMaximum(true);   
+        } 
+              catch (java.beans.PropertyVetoException e) {}         // TODO add your handling code here:
+
+
+
+         try {   
+            form.setSelected(true);   
+            //diz que a janela interna é maximizável   
+            form.setMaximizable(true);   
+            //set o tamanho máximo dela, que depende da janela pai   
+            form.setMaximum(true);   
+        } 
+              catch (java.beans.PropertyVetoException e) {}           
     }//GEN-LAST:event_jMenuItem2ActionPerformed
+
+    private void jMenuItem3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem3ActionPerformed
+        FmrCadProfessor form = new FmrCadProfessor();
+             form.setVisible (true);
+        Component add;
+        add = jDesktopPane1.add(form);
+              try {   
+            form.setSelected(true);   
+            //diz que a janela interna é maximizável   
+            form.setMaximizable(true);   
+            //set o tamanho máximo dela, que depende da janela pai   
+            form.setMaximum(true);   
+        } 
+              catch (java.beans.PropertyVetoException e) {}         // TODO add your handling code here:
+
+
+
+         try {   
+            form.setSelected(true);   
+            //diz que a janela interna é maximizável   
+            form.setMaximizable(true);   
+            //set o tamanho máximo dela, que depende da janela pai   
+            form.setMaximum(true);   
+        } 
+              catch (java.beans.PropertyVetoException e) {}   
+    }//GEN-LAST:event_jMenuItem3ActionPerformed
 
     /**
      * @param args the command line arguments

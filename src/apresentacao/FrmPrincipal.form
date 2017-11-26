@@ -7,7 +7,7 @@
         <Menu class="javax.swing.JMenu" name="jMenu4">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="2" name="C:\Users\postgres\Desktop\icones\home-home-page-onebit-icone-5226-16.png"/>
+              <Image iconType="3" name="/Icones/home-home-page-onebit-icone-5226-16.png"/>
             </Property>
             <Property name="text" type="java.lang.String" value="Inicio"/>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
@@ -33,7 +33,7 @@
         <Menu class="javax.swing.JMenu" name="jMenu1">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="2" name="C:\Users\postgres\Desktop\icones\book-icone-6994-16.png"/>
+              <Image iconType="3" name="/Icones/book-icone-6994-16.png"/>
             </Property>
             <Property name="text" type="java.lang.String" value="Disciplinas"/>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
@@ -68,7 +68,7 @@
         <Menu class="javax.swing.JMenu" name="jMenu2">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="2" name="C:\Users\postgres\Desktop\icones\user-icone-4297-16.png"/>
+              <Image iconType="3" name="/Icones/user-icone-4297-16.png"/>
             </Property>
             <Property name="text" type="java.lang.String" value="Professores"/>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
@@ -83,6 +83,9 @@
                 </Property>
                 <Property name="text" type="java.lang.String" value="Cadastrar"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jMenuItem3ActionPerformed"/>
+              </Events>
             </MenuItem>
             <MenuItem class="javax.swing.JMenuItem" name="jMenuItem4">
               <Properties>
@@ -97,7 +100,7 @@
         <Menu class="javax.swing.JMenu" name="jMenu3">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="2" name="C:\Users\postgres\Desktop\icones\page-white-text-icone-7821-16.png"/>
+              <Image iconType="3" name="/Icones/page-white-text-icone-7821-16.png"/>
             </Property>
             <Property name="text" type="java.lang.String" value="Cursos"/>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
@@ -120,7 +123,7 @@
         <Menu class="javax.swing.JMenu" name="jMenu5">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="2" name="C:\Users\postgres\Desktop\icones\page-white-text-icone-7821-16.png"/>
+              <Image iconType="3" name="/Icones/page-white-text-icone-7821-16.png"/>
             </Property>
             <Property name="text" type="java.lang.String" value="Plano de Ensino"/>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
