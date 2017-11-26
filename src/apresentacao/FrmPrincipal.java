@@ -38,7 +38,7 @@ public class FrmPrincipal extends javax.swing.JFrame {
         jMenuItem7 = new javax.swing.JMenuItem();
         jMenuItem8 = new javax.swing.JMenuItem();
         jMenu1 = new javax.swing.JMenu();
-        jMenuItem1 = new javax.swing.JMenuItem();
+        jMenuItem11 = new javax.swing.JMenuItem();
         jMenuItem2 = new javax.swing.JMenuItem();
         jMenu2 = new javax.swing.JMenu();
         jMenuItem3 = new javax.swing.JMenuItem();
@@ -87,14 +87,14 @@ public class FrmPrincipal extends javax.swing.JFrame {
         jMenu1.setText("Disciplinas");
         jMenu1.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
 
-        jMenuItem1.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_F1, java.awt.event.InputEvent.CTRL_MASK));
-        jMenuItem1.setText("Cadastrar");
-        jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
+        jMenuItem11.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_F1, java.awt.event.InputEvent.CTRL_MASK));
+        jMenuItem11.setText("Cadastrar");
+        jMenuItem11.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem1ActionPerformed(evt);
+                jMenuItem11ActionPerformed(evt);
             }
         });
-        jMenu1.add(jMenuItem1);
+        jMenu1.add(jMenuItem11);
 
         jMenuItem2.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_F1, java.awt.event.InputEvent.ALT_MASK));
         jMenuItem2.setText("Consultar");
@@ -170,63 +170,6 @@ public class FrmPrincipal extends javax.swing.JFrame {
       System.exit(0);  // TODO add your handling code here:
     }//GEN-LAST:event_jMenuItem8ActionPerformed
 
-    @SuppressWarnings("null")
-    private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
-       FrmCadDisciplina form = null;
-        try {
-            form = new FrmCadDisciplina();
-        } catch (ClassNotFoundException ex) {
-            Logger.getLogger(FrmPrincipal.class.getName()).log(Level.SEVERE, null, ex);
-        }
-             form.setVisible (true);
-             jDesktopPane1.add(form);
-              try {   
-            form.setSelected(true);   
-            //diz que a janela interna é maximizável   
-            form.setMaximizable(true);   
-            //set o tamanho máximo dela, que depende da janela pai   
-            form.setMaximum(true);   
-        } 
-              catch (java.beans.PropertyVetoException e) {}         // TODO add your handling code here:
-
-
-
-         try {   
-            form.setSelected(true);   
-            //diz que a janela interna é maximizável   
-            form.setMaximizable(true);   
-            //set o tamanho máximo dela, que depende da janela pai   
-            form.setMaximum(true);   
-        } 
-              catch (java.beans.PropertyVetoException e) {}   
-    }//GEN-LAST:event_jMenuItem1ActionPerformed
-
-    private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
-    FmrConsDisplina form = new FmrConsDisplina();
-             form.setVisible (true);
-        Component add;
-        add = jDesktopPane1.add(form);
-              try {   
-            form.setSelected(true);   
-            //diz que a janela interna é maximizável   
-            form.setMaximizable(true);   
-            //set o tamanho máximo dela, que depende da janela pai   
-            form.setMaximum(true);   
-        } 
-              catch (java.beans.PropertyVetoException e) {}         // TODO add your handling code here:
-
-
-
-         try {   
-            form.setSelected(true);   
-            //diz que a janela interna é maximizável   
-            form.setMaximizable(true);   
-            //set o tamanho máximo dela, que depende da janela pai   
-            form.setMaximum(true);   
-        } 
-              catch (java.beans.PropertyVetoException e) {}           
-    }//GEN-LAST:event_jMenuItem2ActionPerformed
-
     private void jMenuItem3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem3ActionPerformed
         FmrCadProfessor form = new FmrCadProfessor();
              form.setVisible (true);
@@ -252,6 +195,54 @@ public class FrmPrincipal extends javax.swing.JFrame {
         } 
               catch (java.beans.PropertyVetoException e) {}   
     }//GEN-LAST:event_jMenuItem3ActionPerformed
+
+    private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
+        FmrConsDisplina form = new FmrConsDisplina();
+        form.setVisible (true);
+        Component add;
+        add = jDesktopPane1.add(form);
+        try {
+            form.setSelected(true);
+            //diz que a janela interna é maximizável
+            form.setMaximizable(true);
+            //set o tamanho máximo dela, que depende da janela pai
+            form.setMaximum(true);
+        }
+        catch (java.beans.PropertyVetoException e) {}         // TODO add your handling code here:
+
+        try {
+            form.setSelected(true);
+            //diz que a janela interna é maximizável
+            form.setMaximizable(true);
+            //set o tamanho máximo dela, que depende da janela pai
+            form.setMaximum(true);
+        }
+        catch (java.beans.PropertyVetoException e) {}
+    }//GEN-LAST:event_jMenuItem2ActionPerformed
+
+    private void jMenuItem11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem11ActionPerformed
+       FrmCadDisciplina form = new FrmCadDisciplina();
+        form.setVisible (true);
+        Component add;
+        add = jDesktopPane1.add(form);
+        try {
+            form.setSelected(true);
+            //diz que a janela interna é maximizável
+            form.setMaximizable(true);
+            //set o tamanho máximo dela, que depende da janela pai
+            form.setMaximum(true);
+        }
+        catch (java.beans.PropertyVetoException e) {}         // TODO add your handling code here:
+
+        try {
+            form.setSelected(true);
+            //diz que a janela interna é maximizável
+            form.setMaximizable(true);
+            //set o tamanho máximo dela, que depende da janela pai
+            form.setMaximum(true);
+        }
+        catch (java.beans.PropertyVetoException e) {}
+    }//GEN-LAST:event_jMenuItem11ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -302,8 +293,8 @@ public class FrmPrincipal extends javax.swing.JFrame {
     private javax.swing.JMenu jMenu4;
     private javax.swing.JMenu jMenu5;
     private javax.swing.JMenuBar jMenuBar1;
-    private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JMenuItem jMenuItem10;
+    private javax.swing.JMenuItem jMenuItem11;
     private javax.swing.JMenuItem jMenuItem2;
     private javax.swing.JMenuItem jMenuItem3;
     private javax.swing.JMenuItem jMenuItem4;
