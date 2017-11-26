@@ -93,7 +93,7 @@ public class FrmLogin extends javax.swing.JFrame {
         getContentPane().add(txtUsuario, gridBagConstraints);
 
         jButton1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jButton1.setIcon(new javax.swing.ImageIcon("C:\\Users\\postgres\\Desktop\\icones\\check-yes-ok-icone-7166-16.png")); // NOI18N
+        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icones/check-yes-ok-icone-7166-16.png"))); // NOI18N
         jButton1.setText("Entrar");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
