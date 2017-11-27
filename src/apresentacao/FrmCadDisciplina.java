@@ -47,7 +47,7 @@ public class FrmCadDisciplina extends javax.swing.JInternalFrame {
            pst = conecta.prepareStatement (sql);
            pst.setString (1, txtNome.getText());
            pst.setString (2, (String) txtCargaHor.getSelectedItem());
-           pst.setString (3, txtSemestre.getText());
+           pst.setString (3, (String) txtSemestre.getSelectedItem());
            pst.setString (4, (String) txtDescr.getSelectedItem());
            pst.execute();
            JOptionPane.showMessageDialog (null, "Cadastrado com Sucesso", "Cadastro de Disciplina - SISPPC", JOptionPane.INFORMATION_MESSAGE);
@@ -74,10 +74,10 @@ public class FrmCadDisciplina extends javax.swing.JInternalFrame {
         txtCargaHor = new javax.swing.JComboBox<>();
         txtDescr = new javax.swing.JComboBox<>();
         jLabel2 = new javax.swing.JLabel();
-        txtSemestre = new javax.swing.JTextField();
         jLabel5 = new javax.swing.JLabel();
         txtCod_Disc = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
+        txtSemestre = new javax.swing.JComboBox<>();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
 
@@ -117,13 +117,6 @@ public class FrmCadDisciplina extends javax.swing.JInternalFrame {
         jLabel2.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel2.setText("Descrição:");
 
-        txtSemestre.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        txtSemestre.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtSemestreActionPerformed(evt);
-            }
-        });
-
         jLabel5.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel5.setText("Semestre:");
 
@@ -137,6 +130,11 @@ public class FrmCadDisciplina extends javax.swing.JInternalFrame {
 
         jLabel3.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel3.setText("Código da Disciplina:");
+
+        txtSemestre.setEditable(true);
+        txtSemestre.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        txtSemestre.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "1º Semestre", "2º Semestre", "3º Semestre", "4º Semestre", "5º Semestre", "6º Semestre", "7º Semestre", "8º Semestre" }));
+        txtSemestre.setSelectedIndex(-1);
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -160,8 +158,8 @@ public class FrmCadDisciplina extends javax.swing.JInternalFrame {
                             .addComponent(txtSemestre, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 192, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(txtDescr, javax.swing.GroupLayout.PREFERRED_SIZE, 192, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel2))
+                            .addComponent(jLabel2)
+                            .addComponent(txtDescr, javax.swing.GroupLayout.PREFERRED_SIZE, 192, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
         );
@@ -191,13 +189,12 @@ public class FrmCadDisciplina extends javax.swing.JInternalFrame {
                         .addComponent(txtSemestre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(txtDescr, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(39, Short.MAX_VALUE))
+                .addContainerGap(35, Short.MAX_VALUE))
         );
 
-        jPanel1Layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {txtCargaHor, txtCod_Disc, txtDescr, txtNome, txtSemestre});
+        jPanel1Layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {txtCargaHor, txtCod_Disc, txtDescr, txtNome});
 
         txtNome.getAccessibleContext().setAccessibleDescription("");
-        txtSemestre.getAccessibleContext().setAccessibleDescription("");
 
         jButton1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icones/check-yes-ok-icone-7166-16.png"))); // NOI18N
@@ -221,24 +218,23 @@ public class FrmCadDisciplina extends javax.swing.JInternalFrame {
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(10, 10, 10)
+                        .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addContainerGap())
+                    .addGroup(layout.createSequentialGroup()
                         .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jButton2)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addContainerGap())))
+                        .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, Short.MAX_VALUE))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton1)
                     .addComponent(jButton2))
-                .addGap(0, 26, Short.MAX_VALUE))
+                .addGap(0, 11, Short.MAX_VALUE))
         );
 
         layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {jButton1, jButton2});
@@ -249,10 +245,6 @@ public class FrmCadDisciplina extends javax.swing.JInternalFrame {
     private void txtCod_DiscActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtCod_DiscActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtCod_DiscActionPerformed
-
-    private void txtSemestreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtSemestreActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtSemestreActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         cadastraDisciplina();
@@ -277,7 +269,7 @@ public class FrmCadDisciplina extends javax.swing.JInternalFrame {
     private javax.swing.JTextField txtCod_Disc;
     private javax.swing.JComboBox<String> txtDescr;
     private javax.swing.JTextField txtNome;
-    private javax.swing.JTextField txtSemestre;
+    private javax.swing.JComboBox<String> txtSemestre;
     // End of variables declaration//GEN-END:variables
 
     private void cadastrarDisciplina() {
