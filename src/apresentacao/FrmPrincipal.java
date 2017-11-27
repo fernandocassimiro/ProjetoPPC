@@ -173,29 +173,15 @@ public class FrmPrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_jMenuItem8ActionPerformed
 
     private void jMenuItem3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem3ActionPerformed
-        FmrCadProfessor form = new FmrCadProfessor();
-             form.setVisible (true);
+     FmrCadProfessor form = null;
+        try {
+            form = new FmrCadProfessor();
+        } catch (ClassNotFoundException ex) {
+            Logger.getLogger(FrmPrincipal.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        form.setVisible (true);
         Component add;
         add = jDesktopPane1.add(form);
-              try {   
-            form.setSelected(true);   
-            //diz que a janela interna é maximizável   
-            form.setMaximizable(true);   
-            //set o tamanho máximo dela, que depende da janela pai   
-            form.setMaximum(true);   
-        } 
-              catch (java.beans.PropertyVetoException e) {}         // TODO add your handling code here:
-
-
-
-         try {   
-            form.setSelected(true);   
-            //diz que a janela interna é maximizável   
-            form.setMaximizable(true);   
-            //set o tamanho máximo dela, que depende da janela pai   
-            form.setMaximum(true);   
-        } 
-              catch (java.beans.PropertyVetoException e) {}   
     }//GEN-LAST:event_jMenuItem3ActionPerformed
 
     private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
