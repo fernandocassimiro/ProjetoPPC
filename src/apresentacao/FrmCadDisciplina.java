@@ -41,7 +41,7 @@ public class FrmCadDisciplina extends javax.swing.JInternalFrame {
     public void cadastraDisciplina()
     {
         String sql;
-        sql = "Insert into CadDisc (Nome_Disciplina, Carga_Horaria, Semestre, Descr) values(?,?,?,?)";
+        sql = "Insert into CadDisc (Nome_Disc, Carg_Horaria, Semestre, Descr) values(?,?,?,?)";
        try
        {
            pst = conecta.prepareStatement (sql);
