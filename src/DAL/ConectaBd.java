@@ -9,6 +9,8 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 import javax.swing.JOptionPane;
 public class ConectaBd { 
+
+    public static Object conecta;
     
     public static Connection conectabd() throws ClassNotFoundException{
         
