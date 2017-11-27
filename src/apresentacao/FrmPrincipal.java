@@ -200,7 +200,15 @@ public class FrmPrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_jMenuItem5ActionPerformed
 
     private void jMenuItem9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem9ActionPerformed
-        
+        FrmPlanodeEnsino form = null;
+        try {
+            form = new FrmPlanodeEnsino();
+        } catch (ClassNotFoundException ex) {
+            Logger.getLogger(FrmPrincipal.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        form.setVisible (true);
+        Component add;
+        add = jDesktopPane1.add(form);
     }//GEN-LAST:event_jMenuItem9ActionPerformed
 
     /**
