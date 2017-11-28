@@ -91,7 +91,7 @@ public class FmrCadProfessor extends javax.swing.JInternalFrame {
         txtNomeProf.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jLabel2.setText("CPF:");
+        jLabel2.setText("Mátricula:");
 
         jLabel3.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel3.setText("Maior Titulação:");
@@ -132,11 +132,8 @@ public class FmrCadProfessor extends javax.swing.JInternalFrame {
         txtPublic.setRows(5);
         jScrollPane3.setViewportView(txtPublic);
 
-        try {
-            txtCPF.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("###.###.###-##")));
-        } catch (java.text.ParseException ex) {
-            ex.printStackTrace();
-        }
+        txtCPF.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.NumberFormatter(new java.text.DecimalFormat(""))));
+        txtCPF.setText("");
         txtCPF.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
 
         try {
@@ -263,7 +260,6 @@ public class FmrCadProfessor extends javax.swing.JInternalFrame {
         jButton1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icones/check-yes-ok-icone-7166-16.png"))); // NOI18N
         jButton1.setText("Salvar");
-        jButton1.setActionCommand("Salvar");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
@@ -275,7 +271,7 @@ public class FmrCadProfessor extends javax.swing.JInternalFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 835, Short.MAX_VALUE)
+                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 974, Short.MAX_VALUE)
                 .addContainerGap())
             .addGroup(layout.createSequentialGroup()
                 .addGap(19, 19, 19)
@@ -293,7 +289,6 @@ public class FmrCadProfessor extends javax.swing.JInternalFrame {
         );
 
         jPanel1.getAccessibleContext().setAccessibleDescription("");
-        jButton1.getAccessibleContext().setAccessibleName("Salvar");
         jButton1.getAccessibleContext().setAccessibleDescription("");
 
         pack();

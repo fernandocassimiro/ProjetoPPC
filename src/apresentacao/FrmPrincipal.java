@@ -47,7 +47,7 @@ public class FrmPrincipal extends javax.swing.JFrame {
         jMenuItem9 = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("Principal");
+        setTitle(" Sistema PPC - Principal");
 
         jDesktopPane1.setBackground(new java.awt.Color(255, 255, 255));
 
